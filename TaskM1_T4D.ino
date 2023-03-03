@@ -22,6 +22,7 @@ void setup()
   pinMode(A0, INPUT);//defining pin mode A0 of temerature sensor as an input
   pinMode(buzzer, OUTPUT);//defining the buzzer pin as an output pin
   pinMode (pirPin, INPUT);//defining the motion senor pin
+  pinMode (pirPin2, INPUT);//defining the 2nd motion senor pin
   
   Serial.begin(9600);//beginning the serial communication
 
@@ -41,6 +42,7 @@ void loop()
   Serial.print(" C , ");
   Serial.print(tempF);
   Serial.println(" F ");
+  Serial.println("Motion Detected");
   Serial.println("Motion Detected");
 }
 
@@ -65,11 +67,10 @@ void interruptFunction()
 
 void motioninterrupt()
 {
-  
-
+  Serial.println("Motion Detected");
 }
 
 void motioninterruptFunc()
 {
-
+  Serial.println("Motion Detected");
 }
